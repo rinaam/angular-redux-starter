@@ -1,0 +1,12 @@
+<div class="wrapper column">
+  <div>
+    <button
+      *ngFor="let category of categories$ | async"
+      (click)="getJokeFromCategory(category)"
+      class="button"
+    >
+      {{ category }}
+    </button>
+  </div>
+  <p>{{ jokeFromCategory$ | async }}</p>
+</div>

@@ -1,0 +1,25 @@
+<div class="page-wrapper">
+  <form
+    [formGroup]="searchJokeForm"
+    (ngSubmit)="onSubmit(searchJokeForm.value.searchJokeName)"
+    class="form"
+  >
+    <div>
+      <label for="searchJokeName">
+        Search Joke
+      </label>
+      <input
+        id="searchJokeName"
+        type="text"
+        formControlName="searchJokeName"
+        class="input"
+      />
+    </div>
+
+    <button class="button" type="submit">Search Joke</button>
+  </form>
+
+  <p *ngFor="let searchedJoke of searchedJokeList$ | async">
+    {{ searchedJoke }}
+  </p>
+</div>

@@ -1,0 +1,12 @@
+.page-wrapper {
+  margin-top: 80px;
+  .form {
+    display: flex;
+    .button {
+      margin-left: 4px;
+    }
+    .input:focus {
+      outline: none;
+    }
+  }
+}
